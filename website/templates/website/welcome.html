@@ -1,0 +1,18 @@
+{% extends 'basic.html' %}
+
+{% block title %}
+    <title>Welcome</title>
+{% endblock %}
+
+
+{% block content %}
+    <h1>Welcome To my first page</h1>
+    <h2>Meetings:</h2>
+    {% for meeting in meetings %}
+        <li>
+            <a href="{% url 'detail' meeting.id %}">{{ meeting.title }}</a>
+        </li>
+    {% endfor %}
+    <h2><a href="{% url 'Rooms' %}">Rooms</a></h2>
+    <h2><a href="{% url 'newMeeting' %}">Create New Meeting</a></h2>
+{% endblock %}

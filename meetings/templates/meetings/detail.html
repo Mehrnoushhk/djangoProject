@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meeting: {{ meeting.title }}</title>
+</head>
+<body>
+    <h1>{{ meeting.title }}</h1>
+    <p>{{ meeting.title }} will start at {{ meeting.start_time }}
+        on {{ meeting.date }} in {{ meeting.room }}</p>
+    <a href="{% url 'home' %}">Back to home!</a>
+</body>
+</html>
